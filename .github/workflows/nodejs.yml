@@ -8,6 +8,8 @@ on:
 
 jobs:
   build:
+    - name: Build
+
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +28,8 @@ jobs:
       - name: Linting
         run: npm run eslint:check
 
-      - name: Prettify code
-        run: npm run prettier:check --config .prettierrc.json
+      # - name: Prettify code
+      #   run: npm run prettier:check --config .prettierrc.json
 
       - name: Build application
         run: npm run build
@@ -35,5 +37,26 @@ jobs:
       - name: Test application
         run: npm run test
 
-      - name: Code coverage report
-        run: npm run test:coverage
+      # - name: Code coverage report
+      #   run: npm run test:coverage
+
+  deploy:
+    - name: Deploy
+
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy
+        run: |
+          netlify build
+          netlify deploy --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

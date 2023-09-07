@@ -27,7 +27,7 @@ jobs:
         run: npm run eslint:check
 
       - name: Prettify code
-        run: npm run prettier:check
+        run: npm run prettier:check --config .prettierrc.json
 
       - name: Build application
         run: npm run build

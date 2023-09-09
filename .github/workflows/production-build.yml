@@ -4,22 +4,18 @@ on: [workflow_call]
 
 jobs:
   build:
-    name: Build on Node.js ${{ matrix.node-version }}
+    name: Build on Node.js 18.x
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18.x
           cache: 'npm'
 
       - name: Install dependencies

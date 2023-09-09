@@ -1,18 +1,17 @@
-name: Build Application
+name: Production Build
 
 on:
   workflow_call:
 
 jobs:
   build:
-    name: Build on ${{ matrix.node-version }} and ${{ matrix.os }}
+    name: Build on ${{ matrix.node-version }}
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
-        os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
       - name: Checkout repository

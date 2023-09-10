@@ -1,4 +1,5 @@
 name: Pull Request
+run-name: Test 2
 
 on:
   pull_request:

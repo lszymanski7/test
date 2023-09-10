@@ -1,5 +1,6 @@
-name: Production build
-run-name: Test 1
+name: Production Build
+
+run-name: Build on Node.js (${{ inputs.node-version }}) and ${{ inputs.runs-on }}
 
 on:
   workflow_call:

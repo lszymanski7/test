@@ -1,4 +1,4 @@
-name: Production Build
+name: Unit Tests
 
 on:
   workflow_call:
@@ -8,8 +8,8 @@ on:
         type: string
 
 jobs:
-  build:
-    name: Build on Node.js (${{ inputs.node-version }})
+  test:
+    name: Unit tests
 
     runs-on: ubuntu-latest
 
@@ -26,5 +26,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build application
-        run: npm run build
+      - name: Test application
+        run: npm run test

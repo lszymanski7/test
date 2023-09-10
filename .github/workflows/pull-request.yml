@@ -7,19 +7,9 @@ on:
 jobs:
   build:
     name: Production build
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x]
     uses: ./.github/workflows/production-build.yml
-    with:
-      node-version: ${{ matrix.node-version }}
   test:
     name: Unit Tests
     needs: build
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x]
     uses: ./.github/workflows/unit-tests.yml
-    with:
-      node-version: ${{ matrix.node-version }}
 

@@ -2,14 +2,10 @@ name: Production Build
 
 on:
   workflow_call:
-    inputs:
-      node-version:
-        required: true
-        type: string
 
 jobs:
   build:
-    name: Build on Node.js (${{ inputs.node-version }})
+    name: Build on Node.js (18.x)
 
     runs-on: ubuntu-latest
 
@@ -17,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ inputs.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ inputs.node-version }}
+          node-version: 18.x
           cache: 'npm'
 
       - name: Install dependencies

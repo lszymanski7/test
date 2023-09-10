@@ -1,0 +1,46 @@
+name: Production Build
+
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        description: The type of machine to run the job on.
+        type: string
+        default: ubuntu-latest
+      node-version:
+        description: The version of Node.js to be used.
+        type: string
+        default: 18.x
+  workflow_dispatch:
+    inputs:
+      runs-on:
+        description: OS
+        required: true
+        type: choice
+        default: ubuntu-latest
+        options:
+        - macos-latest
+        - ubuntu-latest
+        - windows-latest
+
+jobs:
+  build:
+    name: Node.js (${{ inputs.node-version }})
+
+    runs-on: ${{ inputs.runs-on }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build application
+        run: npm run build

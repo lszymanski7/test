@@ -7,12 +7,10 @@ on:
         description: Operating System (OS)
         type: string
         default: ubuntu-latest
-        required: true
       node-version:
         description: Node.js
         type: string
         default: 18.x
-        required: true
   workflow_dispatch:
     inputs:
       runs-on:

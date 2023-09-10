@@ -1,35 +1,39 @@
-name: Production Build
+name: Production build
 
 on:
   workflow_call:
     inputs:
       runs-on:
-        description: The type of machine to run the job on.
+        description: Operating System (OS)
         type: string
         default: ubuntu-latest
+        required: true
       node-version:
-        description: The version of Node.js to be used.
+        description: Node.js
         type: string
-        default: 20.x
+        default: 18.x
+        required: true
   workflow_dispatch:
     inputs:
       runs-on:
-        description: OS
-        required: true
+        description: Operating System (OS)
         type: choice
-        default: ubuntu-latest
         options:
         - macos-latest
         - ubuntu-latest
         - windows-latest
+        default: ubuntu-latest
+        required: true
       node-version:
-        description: Node.js version
+        description: Node.js
         type: choice
-        default: 18.x
         options:
+        - 14.x
         - 16.x
         - 18.x
         - 20.x
+        default: 18.x
+        required: true
 
 jobs:
   build:

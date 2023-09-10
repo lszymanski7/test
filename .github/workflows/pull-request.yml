@@ -15,6 +15,7 @@ jobs:
       node-version: ${{ matrix.node-version }}
   test:
     name: Unit Tests
+    needs: build
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]

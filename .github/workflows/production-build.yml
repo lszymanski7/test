@@ -1,4 +1,4 @@
-name: Production Build
+name: Production build
 
 run-name: Build on Node.js (${{ inputs.node-version }}) and ${{ inputs.runs-on }}
 
@@ -37,7 +37,7 @@ on:
 
 jobs:
   build:
-    name: Node.js (${{ inputs.node-version }}) | (${{ inputs.runs-on }})
+    name: Node.js (${{ inputs.node-version }}) and ${{ inputs.runs-on }}
 
     runs-on: ${{ inputs.runs-on }}
 

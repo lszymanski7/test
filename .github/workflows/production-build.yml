@@ -10,7 +10,7 @@ on:
       node-version:
         description: The version of Node.js to be used.
         type: string
-        default: 18.x
+        default: 20.x
   workflow_dispatch:
     inputs:
       runs-on:
@@ -22,6 +22,14 @@ on:
         - macos-latest
         - ubuntu-latest
         - windows-latest
+      node-version:
+        description: Node.js version
+        type: choice
+        default: 18.x
+        options:
+        - 16.x
+        - 18.x
+        - 20.x
 
 jobs:
   build:

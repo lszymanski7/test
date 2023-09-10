@@ -1,12 +1,14 @@
-name: Pull request
-
-run-name: Test 2
+name: Pull Request
 
 on:
   pull_request:
     branches: [ main ]
 
 jobs:
+  # code-check:
+  #   name: Code check
+  #   uses: ./.github/workflows/code-check.yml
   build:
     name: Production build
+    # needs: code-check
     uses: ./.github/workflows/production-build.yml

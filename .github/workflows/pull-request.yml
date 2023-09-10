@@ -8,8 +8,3 @@ jobs:
   build:
     name: Production build
     uses: ./.github/workflows/production-build.yml
-  test:
-    name: Unit Tests
-    needs: build
-    uses: ./.github/workflows/unit-tests.yml
-

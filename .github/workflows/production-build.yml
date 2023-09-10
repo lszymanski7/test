@@ -2,12 +2,21 @@ name: Production Build
 
 on:
   workflow_call:
+    inputs:
+      runs-on:
+        description: The type of machine to run the job on.
+        type: string
+        default: ubuntu-latest
+      node-version:
+        description: The version of Node.js to be used.
+        type: string
+        default: 18.x
 
 jobs:
   build:
-    name: Build on Node.js (18.x)
+    name: Node.js (${{ inputs.node-version }})
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runs-on }}
 
     steps:
       - name: Checkout repository
@@ -16,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: ${{ inputs.node-version }}
           cache: 'npm'
 
       - name: Install dependencies

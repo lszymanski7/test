@@ -11,6 +11,17 @@ on:
         description: The version of Node.js to be used.
         type: string
         default: 18.x
+  workflow_dispatch:
+    inputs:
+      runs-on:
+        description: OS
+        required: true
+        type: choice
+        default: ubuntu-latest
+        options:
+        - macos-latest
+        - ubuntu-latest
+        - windows-latest
 
 jobs:
   build:

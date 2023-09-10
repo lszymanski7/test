@@ -1,4 +1,5 @@
-name: Pull Request
+name: Pull request
+
 run-name: Test 2
 
 on:

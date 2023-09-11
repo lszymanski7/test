@@ -1,8 +1,12 @@
-name: Lint source code
+name: Code Linting
+
+run-on: Check source code by ESLint
+
+on: [workflow_call, workflow_dispatch]
 
 jobs:
   eslint:
-    name: Eslint
+    name: ESLint
 
     runs-on: ubuntu-latest
 
@@ -19,5 +23,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linter
+      - name: Run ESLint
         run: npm run eslint:check

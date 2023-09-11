@@ -2,12 +2,12 @@ name: Pull Request
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   lint:
-    name: Linters
-    uses: ./.github/workflows/lint.yml
+    name: Code Linting
+    uses: ./.github/workflows/code-linting.yml
   build:
     name: Production build
     needs: lint

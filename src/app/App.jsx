@@ -1,7 +1,6 @@
 import React from 'react'
 
 const App = () => {
-  var test = 10;
 
   return (
     <div className="fullscreen">

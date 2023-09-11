@@ -8,7 +8,10 @@ jobs:
   lint:
     name: Code Linting
     uses: ./.github/workflows/code-linting.yml
+  format:
+    name: Code Formatting
+    uses: ./.github/workflows/code-formatting.yml
   build:
     name: Production build
-    needs: lint
+    needs: [lint, format]
     uses: ./.github/workflows/production-build.yml

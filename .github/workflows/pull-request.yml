@@ -5,10 +5,10 @@ on:
     branches: [ main ]
 
 jobs:
-  # code-check:
-  #   name: Code check
-  #   uses: ./.github/workflows/code-check.yml
+  # code-quality:
+  #   name: Code quality
+  #   uses: ./.github/workflows/code-quality.yml
   build:
     name: Production build
-    # needs: code-check
+    # needs: code-quality
     uses: ./.github/workflows/production-build.yml

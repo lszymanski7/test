@@ -24,4 +24,4 @@ jobs:
         run: npm install
 
       - name: Run Prettier
-        run: npx prettier --check ./src/app/**/*.jsx --config ./.prettierrc.json
+        run: npm run prettier:check

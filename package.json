@@ -12,7 +12,7 @@
     "eslint:check": "eslint . --ext .jsx",
     "eslint:fix": "eslint --fix . --ext .jsx",
     "heroku-postbuild": "npm run build",
-    "prettier:check": "npx prettier --check src/app/**/*.jsx --config .prettierrc.json",
+    "prettier:check": "prettier -c src/app/**/*.jsx",
     "prettier:fix": "prettier --write .",
     "start": "node server/server.js",
     "test": "jest --config config/jest/jest.config.js",

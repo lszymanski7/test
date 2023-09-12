@@ -2,7 +2,7 @@ import React from 'react'
 
 const App = () => {
   const xd = 'PAGE'
-  var test = 10;
+  var test = 15;
 
   return (
     <div className="fullscreen">

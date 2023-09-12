@@ -27,7 +27,7 @@
   "rules": {
     "no-duplicate-imports": "warn",
     "no-self-compare": "warn",
-    "no-var": "error",
+    "no-var": "warn",
     "prefer-const": "error",
     "react/no-array-index-key": "warn",
     "react/no-arrow-function-lifecycle": "warn",

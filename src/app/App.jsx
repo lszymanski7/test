@@ -1,7 +1,7 @@
 import React from 'react'
 
 const App = () => {
-  const xd = 'PAGE';
+  const xd = 'PAGE'
 
   return (
     <div className="fullscreen">

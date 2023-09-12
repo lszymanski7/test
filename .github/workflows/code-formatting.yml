@@ -1,6 +1,6 @@
 name: Code Formatting
 
-run-name: Check source code by Prettier
+run-name: Analyze source code by Prettier
 
 on: [workflow_call, workflow_dispatch]
 

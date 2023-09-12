@@ -1,6 +1,6 @@
 name: Code Linting
 
-run-name: Check source code by ESLint
+run-name: Analyze source code by ESLint
 
 on: [workflow_call, workflow_dispatch]
 

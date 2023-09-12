@@ -24,4 +24,4 @@ jobs:
         run: npm ci
 
       - name: Run Prettier
-        run: npx prettier --config .prettierrc --check
+        run: npx prettier --check ./src/app/**/*.jsx --config .prettierrc

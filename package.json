@@ -77,9 +77,9 @@
     "webpack-merge": "^5.9.0"
   }, 
   "lint-staged": {
-    "src/app/**/*.jsx": [
-      "npm run eslint:check",
-      "npm run prettier:check"
+    ".jsx": [
+      "eslint . --ext .jsx",
+      "prettier --check src/app/**/*.jsx"
     ]
   },  
   "browserslist": {

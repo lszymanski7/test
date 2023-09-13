@@ -78,8 +78,8 @@
   }, 
   "lint-staged": {
     "*.jsx": [
-      "npm run eslint:check",
-      "npm run prettier:check"
+      "eslint",
+      "prettier --check"
     ]
   },  
   "browserslist": {

@@ -37,7 +37,7 @@ on:
 
 jobs:
   build:
-    name: Node.js (${{ inputs.node-version }}) + ${{ inputs.runs-on === 'ubuntu-latest' && Ubuntu }}
+    name: Node.js (${{ inputs.node-version }}) + ${{ inputs.runs-on == 'ubuntu-latest' && Ubuntu }}
 
     runs-on: ${{ inputs.runs-on }}
 

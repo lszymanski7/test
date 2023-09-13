@@ -8,7 +8,8 @@ exports[`App should be rendered correctly. 1`] = `
     <h1
       class="title"
     >
-      TEST PAGE
+      TEST 
+      PAGE
     </h1>
   </div>
 </div>

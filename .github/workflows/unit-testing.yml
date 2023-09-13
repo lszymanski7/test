@@ -6,7 +6,7 @@ on: [workflow_call, workflow_dispatch]
 
 jobs:
   test:
-    name: Jest + Testing Library
+    name: Jest and Testing Library
 
     runs-on: ubuntu-latest
 

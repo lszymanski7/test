@@ -21,4 +21,4 @@ jobs:
   test:
     name: Unit testing
     needs: build
-    uses: ./github/workflows/unit-testing.yml
+    uses: ./.github/workflows/unit-testing.yml

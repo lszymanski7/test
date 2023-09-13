@@ -85,7 +85,8 @@
     "*.{js,jsx}": [
       "eslint",
       "prettier --check"
-    ]
+    ],
+    "*.{css,scss}": "stylelint"
   },
   "browserslist": {
     "production": [

@@ -1,1 +1,11 @@
-{ "extends": ["stylelint-config-standard"] }
+{ 
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "no-invalid-double-slash-comments": null,
+    "function-no-unknown": null,
+    "color-function-notation": null,
+    "hue-degree-notation": null,
+    "value-keyword-case": null,
+    "unknown-words": null
+  }
+}

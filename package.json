@@ -12,7 +12,7 @@
     "eslint:check": "eslint . --ext .jsx",
     "eslint:fix": "eslint --fix . --ext .jsx",
     "heroku-postbuild": "npm run build",
-    "prettier:check": "prettier --check .",
+    "prettier:check": "prettier --check src/app/**/*.jsx",
     "prettier:fix": "prettier --write .",
     "start": "node server/server.js",
     "test": "jest --config config/jest/jest.config.js",
@@ -77,9 +77,9 @@
     "webpack-merge": "^5.9.0"
   }, 
   "lint-staged": {
-    ".jsx": [
-      "eslint . --ext .jsx",
-      "prettier --check src/app/**/*.jsx"
+    "*.jsx": [
+      "npm run eslint:check",
+      "npm run prettier:check"
     ]
   },  
   "browserslist": {

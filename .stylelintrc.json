@@ -6,6 +6,8 @@
     "color-function-notation": null,
     "hue-degree-notation": null,
     "value-keyword-case": null,
-    "alpha-value-notation": null
+    "alpha-value-notation": null,
+    "import-notation": null,
+    "at-rule-empty-line-before": null
   }
 }

@@ -8,13 +8,15 @@
   "private": true,
   "scripts": {
     "build": "webpack --config config/webpack/webpack.prod.js",
-    "dev-server": "webpack serve --config config/webpack/webpack.dev.js",
+    "dev": "webpack serve --config config/webpack/webpack.dev.js",
     "eslint:check": "eslint . --ext .jsx",
     "eslint:fix": "eslint --fix . --ext .jsx",
     "heroku-postbuild": "npm run build",
     "prettier:check": "prettier --check src/app/**/*.jsx",
     "prettier:fix": "prettier --write .",
     "start": "node server/server.js",
+    "stylelint:check": "stylelint **/*.scss --allow-empty-input",
+    "stylelint:fix": "stylelint --fix **/*.scss --allow-empty-input",
     "test": "jest --config config/jest/jest.config.js",
     "test:coverage": "jest --config config/jest/jest.config.js --coverage",
     "test:watch": "jest --config config/jest/jest.config.js --watch"
@@ -70,11 +72,21 @@
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-scss": "^5.1.0",
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.9.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{css,scss}": "stylelint"
   },
   "browserslist": {
     "production": [

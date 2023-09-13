@@ -1,5 +1,5 @@
 {
-  ".jsx": [
+  "*.jsx": [
     "npm run eslint:check",
     "npm run prettier:check"
   ]

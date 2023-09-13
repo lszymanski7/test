@@ -1,11 +1,12 @@
-name: Unit Tests
+name: Unit Testing
 
-on:
-  workflow_call:
+run-name: Perform unit testing by Jest & Testing Library
+
+on: [workflow_call, workflow_dispatch]
 
 jobs:
   test:
-    name: Unit tests
+    name: Jest + Testing Library
 
     runs-on: ubuntu-latest
 

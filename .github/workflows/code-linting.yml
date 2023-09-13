@@ -25,6 +25,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run eslint:check
+
   stylelint:
     name: Stylelint
 

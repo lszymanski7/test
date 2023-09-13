@@ -15,8 +15,7 @@
     "prettier:check": "prettier --check src/app/**/*.jsx",
     "prettier:fix": "prettier --write .",
     "start": "node server/server.js",
-    "test": "sh test/all.sh",
-    "testx": "jest --config config/jest/jest.config.js",
+    "test": "jest --config config/jest/jest.config.js",
     "test:coverage": "jest --config config/jest/jest.config.js --coverage",
     "test:watch": "jest --config config/jest/jest.config.js --watch"
   },

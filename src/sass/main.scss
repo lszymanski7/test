@@ -1,14 +1,7 @@
-// ================================================================================================
-// Main
-// ================================================================================================
+/* Main */
 
 @charset 'utf-8';
 
-@import './abstracts/variables';
-
-@import 
-  './base/base',
-  './base/reset',
-  './base/typography';
-
-@import './layout/display';
+@import url('./abstracts/variables');
+@import url('./base/base'), url('./base/reset'), url('./base/typography');
+@import url('./layout/display');

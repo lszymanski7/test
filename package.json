@@ -75,7 +75,13 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.9.0"
-  },
+  }, 
+  "lint-staged": {
+    "*.jsx": [
+      "npm run eslint:check",
+      "npm run prettier:check"
+    ]
+  },  
   "browserslist": {
     "production": [
       ">0.2%",

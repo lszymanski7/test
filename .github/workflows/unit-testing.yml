@@ -1,6 +1,6 @@
 name: Unit Testing
 
-run-name: Perform unit testing by Jest & Testing Library
+run-name: Perform unit tests by Jest & Testing Library
 
 on: [workflow_call, workflow_dispatch]
 

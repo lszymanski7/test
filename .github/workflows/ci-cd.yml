@@ -1,7 +1,7 @@
-name: Pull Request
+name: CI/CD
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
@@ -22,3 +22,8 @@ jobs:
     name: Unit Testing
     needs: build
     uses: ./.github/workflows/unit-testing.yml
+
+  deploy:
+    name: Deployment
+    needs: test
+    uses: ./.github/workflows/deployment.yml

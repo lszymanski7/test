@@ -25,7 +25,7 @@ jobs:
           npm ci
           npm install --save-dev netlify-cli
 
-      - name:
+      - name: aa
         uses: actions/download-artifact@v3
         with:
           name: production-build

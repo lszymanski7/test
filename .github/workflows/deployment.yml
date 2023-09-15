@@ -26,7 +26,9 @@ jobs:
           npm install --save-dev netlify-cli
 
       - name: Deploy application
-        run: netlify deploy --build --prod
+        run: |
+          netlify build
+          netlify deploy --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

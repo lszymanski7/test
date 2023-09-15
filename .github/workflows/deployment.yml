@@ -25,9 +25,14 @@ jobs:
           npm ci
           npm install --save-dev netlify-cli
 
+      - name: aa
+        uses: actions/download-artifact@v3
+        with:
+          name: production-build
+
       - name: Deploy application
         run: |
-          netlify deploy --build --prod
+          netlify deploy --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

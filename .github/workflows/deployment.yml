@@ -25,8 +25,8 @@ jobs:
           npm ci
           npm install --save-dev netlify-cli
 
-      - if: ${{ github.event_name != 'workflow_dispatch' }} 
-        name: Download production build artifact
+      - name: Download production build artifact
+        if: ${{ github.event_name == 'workflow_call' }}
         uses: actions/download-artifact@v3
         with:
           name: production-build

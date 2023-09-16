@@ -31,11 +31,10 @@ jobs:
         with:
           name: production-build
           path: build
-          if-no-files-found: warn
 
       - name: Deploy application
         run: |
-          if [[ "${{ github.event_name }}" != 'workflow_dispatch' ]]; then
+          if [ '${{ github.event_name }}' != 'workflow_dispatch' ]; then
             netlify deploy --prod
           else
             netlify deploy --build --prod

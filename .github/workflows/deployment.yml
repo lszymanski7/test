@@ -27,6 +27,8 @@ jobs:
 
       - name: Download production build artifact
         if: ${{ github.event_name }} != 'workflow_dispatch'
+        run: |
+          echo ${{ github.event_name }} != 'workflow_dispatch'
         uses: actions/download-artifact@v3
         with:
           name: production-build

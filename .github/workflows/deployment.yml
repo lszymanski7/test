@@ -32,6 +32,12 @@ jobs:
           name: production-build
           path: build
 
+      - name: Echo
+        run: |
+          echo '${{ github.event_name }}'
+          echo ${{ github.event_name }}
+          echo "${{ github.event_name }}"
+
       - name: Deploy application
         run: |
           if [ '${{ github.event_name }}' != 'workflow_dispatch' ]; then

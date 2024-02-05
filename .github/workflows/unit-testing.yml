@@ -51,5 +51,6 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           directory: ./coverage/
-          files: ./App.jsx.html,./App2.js.html
+          file: ./index.html
+          flags: unittests
           token: ${{ secrets.CODECOV_TOKEN }}

@@ -45,10 +45,9 @@ jobs:
         run: npm ci
 
       - name: Generate code coverage report
-        run: npm run test:coverage
+        run: npm run test -- --coverage --watchAll=false
       
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
-          directory: ./coverage
           token: ${{ secrets.CODECOV_TOKEN }}

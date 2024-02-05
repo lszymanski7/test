@@ -17,7 +17,7 @@
     "start": "node server/server.js",
     "stylelint:check": "stylelint **/*.scss --allow-empty-input",
     "stylelint:fix": "stylelint --fix **/*.scss --allow-empty-input",
-    "test": "jest --config config/jest/jest.config.js --coverage",
+    "test": "jest --config config/jest/jest.config.js",
     "test:coverage": "jest --config config/jest/jest.config.js --coverage",
     "test:watch": "jest --config config/jest/jest.config.js --watch"
   },

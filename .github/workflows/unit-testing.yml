@@ -45,10 +45,11 @@ jobs:
         run: npm ci
 
       - name: Generate code coverage report
-        run: npm run test
+        run: npm run test:coverage
       
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           directory: ./coverage
+          flags: t
           token: ${{ secrets.CODECOV_TOKEN }}

@@ -19,11 +19,7 @@
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
-  "plugins": [
-    "import", 
-    "react", 
-    "react-hooks"
-  ],
+  "plugins": ["import", "react", "react-hooks"],
   "rules": {
     "no-duplicate-imports": "warn",
     "no-self-compare": "warn",
@@ -50,15 +46,8 @@
         "plugin:jest-dom/recommended",
         "plugin:testing-library/react"
       ],
-      "files": [
-        "**/*.spec.[jt]s?(x)", 
-        "**/*.test.[jt]s?(x)"
-      ],
-      "plugins": [
-        "jest", 
-        "jest-dom", 
-        "testing-library"
-      ],
+      "files": ["**/*.spec.[jt]s?(x)", "**/*.test.[jt]s?(x)"],
+      "plugins": ["jest", "jest-dom", "testing-library"],
       "rules": {
         "jest/max-nested-describe": ["error", { "max": 3 }],
         "jest/no-duplicate-hooks": "error",
@@ -76,10 +65,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js", 
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     },
     "jest": {
